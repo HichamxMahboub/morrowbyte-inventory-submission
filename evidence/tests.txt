@@ -1,0 +1,40 @@
+Command (from workspace): python3 -B -m unittest discover -s tests -v
+Exit code: 0
+
+STDOUT:
+
+STDERR:
+testImport_whenSingleResult_mapsWarning (test_smoke.SmokeTests.testImport_whenSingleResult_mapsWarning) ... ok
+testLookup_whenCustomerEvidence_returnsRecord (test_smoke.SmokeTests.testLookup_whenCustomerEvidence_returnsRecord) ... ok
+testMigration_whenVersionOne_renamesIdentifier (test_smoke.SmokeTests.testMigration_whenVersionOne_renamesIdentifier) ... ok
+testPack_whenPlainAttachment_verifies (test_smoke.SmokeTests.testPack_whenPlainAttachment_verifies) ... ok
+testRedaction_whenPlainSecret_removesValue (test_smoke.SmokeTests.testRedaction_whenPlainSecret_removesValue) ... ok
+testRuntime_whenOffline_reportsReady (test_smoke.SmokeTests.testRuntime_whenOffline_reportsReady) ... ok
+testSummary_whenCurrentFixture_countsMedium (test_smoke.SmokeTests.testSummary_whenCurrentFixture_countsMedium) ... ok
+testSummary_whenUnverified_distinguishesUnknown (test_smoke.SmokeTests.testSummary_whenUnverified_distinguishesUnknown) ... ok
+test_argument_count_and_selfcheck (test_task.CommandTests.test_argument_count_and_selfcheck) ... ok
+test_bad_requests_use_stderr_and_exit_two_without_changing_input (test_task.CommandTests.test_bad_requests_use_stderr_and_exit_two_without_changing_input) ... ok
+test_deeply_nested_json_is_caught (test_task.CommandTests.test_deeply_nested_json_is_caught) ... ok
+test_directory_input_is_caught_without_changing_contents (test_task.CommandTests.test_directory_input_is_caught_without_changing_contents) ... ok
+test_invalid_utf8_is_caught_and_input_is_unchanged (test_task.CommandTests.test_invalid_utf8_is_caught_and_input_is_unchanged) ... ok
+test_matching_request_returns_one_json_object (test_task.CommandTests.test_matching_request_returns_one_json_object) ... ok
+test_missing_file_uses_stderr_and_exit_two (test_task.CommandTests.test_missing_file_uses_stderr_and_exit_two) ... ok
+test_permission_error_is_caught (test_task.CommandTests.test_permission_error_is_caught) ... ok
+test_supplied_sample_is_invalid_with_exit_zero_and_unchanged_bytes (test_task.CommandTests.test_supplied_sample_is_invalid_with_exit_zero_and_unchanged_bytes) ... ok
+test_unusual_names_round_trip_as_json (test_task.CommandTests.test_unusual_names_round_trip_as_json) ... ok
+test_wrong_json_types_are_caught (test_task.CommandTests.test_wrong_json_types_are_caught) ... ok
+test_all_lists_are_sorted_and_names_are_unique (test_task.InventoryTests.test_all_lists_are_sorted_and_names_are_unique) ... ok
+test_changed_duplicate_is_detected_in_either_order (test_task.InventoryTests.test_changed_duplicate_is_detected_in_either_order) ... ok
+test_comparison_does_not_mutate_request (test_task.InventoryTests.test_comparison_does_not_mutate_request) ... ok
+test_contract_examples (test_task.InventoryTests.test_contract_examples) ... ok
+test_expected_insertion_order_is_irrelevant (test_task.InventoryTests.test_expected_insertion_order_is_irrelevant) ... ok
+test_hash_format_is_not_validated (test_task.InventoryTests.test_hash_format_is_not_validated) ... ok
+test_many_repeated_entries_are_reported_once (test_task.InventoryTests.test_many_repeated_entries_are_reported_once) ... ok
+test_member_order_does_not_change_result (test_task.InventoryTests.test_member_order_does_not_change_result) ... ok
+test_names_are_compared_literally_without_filesystem_access (test_task.InventoryTests.test_names_are_compared_literally_without_filesystem_access) ... ok
+test_small_inventory_combinations_against_contract_oracle (test_task.InventoryTests.test_small_inventory_combinations_against_contract_oracle) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 12.258s
+
+OK

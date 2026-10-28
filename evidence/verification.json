@@ -1,0 +1,101 @@
+{
+  "checked_at_utc": "2026-10-28T16:25:55.561868+00:00",
+  "python_version": "3.12.3",
+  "test_methods": 29,
+  "enumerated_inventory_cases": 2331,
+  "choices_word_count": 247,
+  "commands": [
+    {
+      "name": "selfcheck",
+      "command": [
+        "python3",
+        "-B",
+        "task.py",
+        "--selfcheck"
+      ],
+      "exit_code": 0,
+      "log": "evidence/selfcheck.txt",
+      "result": {
+        "ok": true,
+        "mode": "local-only"
+      }
+    },
+    {
+      "name": "tests",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "evidence/tests.txt"
+    },
+    {
+      "name": "missing-example",
+      "command": [
+        "python3",
+        "-B",
+        "task.py",
+        "examples/task-request.json"
+      ],
+      "exit_code": 0,
+      "log": "evidence/missing-example.txt",
+      "result": {
+        "assurance": "inventory-only",
+        "changed": [],
+        "duplicates": [],
+        "missing": [
+          "x"
+        ],
+        "status": "invalid",
+        "unexpected": []
+      }
+    },
+    {
+      "name": "duplicate-example",
+      "command": [
+        "python3",
+        "-B",
+        "task.py",
+        "examples/task-duplicate-request.json"
+      ],
+      "exit_code": 0,
+      "log": "evidence/duplicate-example.txt",
+      "result": {
+        "assurance": "inventory-only",
+        "changed": [
+          "x"
+        ],
+        "duplicates": [
+          "x"
+        ],
+        "missing": [],
+        "status": "invalid",
+        "unexpected": []
+      }
+    }
+  ],
+  "fixtures_and_original_example_unchanged_during_final_verification": true,
+  "source_sha256_before": {
+    "workspace/fixtures/current.json": "b2697421ca3544837269a24ad6f826200f71ae37d620d47c545ee2f8a0621265",
+    "workspace/fixtures/legacy.json": "e8d79a550e2145f369697970267c2daa88868d9279291a273f87fb1f84e96990",
+    "workspace/fixtures/proof.txt": "b09d51026a891d2cbd8c17b897e98e395cc55470dd7eec4f19d0876dbf8cc1fe",
+    "workspace/fixtures/scanner.json": "034c5888cde23d7e259abf7ef2fc6559e2c19b3adbb317c9eef86af6dd0e63bc",
+    "workspace/fixtures/secrets.json": "f6106ef0633f7dbbecd2cd1d05e549177e60a0acd1ae3e2b7e14a4d532f916d7",
+    "workspace/examples/task-request.json": "e4e7269cdcfe07c4f08d54bf85858902349b328c92df1bb5ceef919df32abf67"
+  },
+  "source_sha256_after": {
+    "workspace/fixtures/current.json": "b2697421ca3544837269a24ad6f826200f71ae37d620d47c545ee2f8a0621265",
+    "workspace/fixtures/legacy.json": "e8d79a550e2145f369697970267c2daa88868d9279291a273f87fb1f84e96990",
+    "workspace/fixtures/proof.txt": "b09d51026a891d2cbd8c17b897e98e395cc55470dd7eec4f19d0876dbf8cc1fe",
+    "workspace/fixtures/scanner.json": "034c5888cde23d7e259abf7ef2fc6559e2c19b3adbb317c9eef86af6dd0e63bc",
+    "workspace/fixtures/secrets.json": "f6106ef0633f7dbbecd2cd1d05e549177e60a0acd1ae3e2b7e14a4d532f916d7",
+    "workspace/examples/task-request.json": "e4e7269cdcfe07c4f08d54bf85858902349b328c92df1bb5ceef919df32abf67"
+  },
+  "limits": "Local verification only; bounded enumeration is not exhaustive. Permission errors are mocked."
+}

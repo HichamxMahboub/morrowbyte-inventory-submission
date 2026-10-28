@@ -1,0 +1,24 @@
+Baseline observations from earlier in this working session, before the first code fix.
+This is a record of those observations, not a fresh run of the original adapter.
+
+From workspace:
+  python3 -B task.py --selfcheck
+Exit: 0
+Stdout:
+{"ok": true, "mode": "local-only"}
+
+  python3 -B task.py examples/task-request.json
+Exit: 0
+Stdout:
+{"assurance": "authenticated", "changed": [], "duplicates": [], "missing": [], "status": "ok", "unexpected": []}
+
+The original fixture expects x but observes nothing, so this was a false success.
+
+After adding the first regression tests but before changing solve:
+  python3 -B -m unittest discover -s tests -p test_task.py -v
+Exit: 1
+Ran 9 tests in 1.119s
+FAILED (failures=13)
+The failure count includes failed subtests. Failures demonstrated missing/unexpected/
+duplicate handling, sorted output, order dependence, hidden mismatches and incorrect
+assurance. The corrected adapter and expanded final suite are recorded separately.

@@ -1,0 +1,7 @@
+Command (from workspace): python3 -B task.py --selfcheck
+Exit code: 0
+
+STDOUT:
+{"ok": true, "mode": "local-only"}
+
+STDERR:

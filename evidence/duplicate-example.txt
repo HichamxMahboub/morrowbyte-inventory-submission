@@ -1,0 +1,7 @@
+Command (from workspace): python3 -B task.py examples/task-duplicate-request.json
+Exit code: 0
+
+STDOUT:
+{"assurance": "inventory-only", "changed": ["x"], "duplicates": ["x"], "missing": [], "status": "invalid", "unexpected": []}
+
+STDERR:
